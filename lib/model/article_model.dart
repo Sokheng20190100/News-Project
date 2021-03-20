@@ -1,21 +1,21 @@
 // To parse this JSON data, do
 //
-//     final articleModel = articleModelFromJson(jsonString);
+//     final newsModel = newsModelFromJson(jsonString);
 
 import 'dart:convert';
 
-ArticleModel articleModelFromJson(String str) => ArticleModel.fromJson(json.decode(str));
+NewsModel newsModelFromJson(String str) => NewsModel.fromJson(json.decode(str));
 
-String articleModelToJson(ArticleModel data) => json.encode(data.toJson());
+String newsModelToJson(NewsModel data) => json.encode(data.toJson());
 
-class ArticleModel {
-  ArticleModel({
+class NewsModel {
+  NewsModel({
     this.articles,
   });
 
   List<Article> articles;
 
-  factory ArticleModel.fromJson(Map<String, dynamic> json) => ArticleModel(
+  factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
     articles: List<Article>.from(json["articles"].map((x) => Article.fromJson(x))),
   );
 
@@ -28,30 +28,34 @@ class Article {
   Article({
     this.aid,
     this.title,
-    this.body,
-    this.date,
+    this.subtitle,
+    this.desc,
     this.img,
+    this.date,
   });
 
   String aid;
   String title;
-  String body;
-  String date;
+  String subtitle;
+  String desc;
   String img;
+  String date;
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
     aid: json["aid"],
     title: json["title"],
-    body: json["body"],
-    date: json["date"],
+    subtitle: json["subtitle"],
+    desc: json["desc"],
     img: json["img"],
+    date: json["date"],
   );
 
   Map<String, dynamic> toJson() => {
     "aid": aid,
     "title": title,
-    "body": body,
-    "date": date,
+    "subtitle": subtitle,
+    "desc": desc,
     "img": img,
+    "date": date,
   };
 }

@@ -7,7 +7,7 @@ class UpdatePage extends StatefulWidget{
   _UpdatePageState createState() => _UpdatePageState();
 }
 class _UpdatePageState extends State<UpdatePage> {
-  Future<ArticleModel> _articleData;
+  Future<NewsModel> _articleData;
   List<Article> _article;
 
   @override

@@ -7,7 +7,7 @@ class MyListViewPage extends StatefulWidget{
   _MyListViewPageState createState() => _MyListViewPageState();
 }
 class _MyListViewPageState extends State<MyListViewPage> {
-  Future<ArticleModel> _articleData;
+  Future<NewsModel> _articleData;
   List<Article> _article;
 
   @override

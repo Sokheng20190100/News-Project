@@ -7,7 +7,7 @@ class InsertPage extends StatefulWidget{
   _InsertPageState createState() => _InsertPageState();
 }
 class _InsertPageState extends State<InsertPage> {
-  Future<ArticleModel> _articleData;
+  Future<NewsModel> _articleData;
   List<Article> _article;
 
   @override

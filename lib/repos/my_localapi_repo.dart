@@ -4,7 +4,7 @@ import 'package:news_project/model/article_model.dart';
 
 const Android = "10.0.2.2";
 
-Future<ArticleModel> readData() async{
+Future<NewsModel> readData() async{
 
   String address = Android;
 
@@ -13,7 +13,7 @@ Future<ArticleModel> readData() async{
   http.Response response = await http.get(url);
 
   if(response.statusCode == 200){
-    return compute(articleModelFromJson, response.body);
+    return compute(newsModelFromJson, response.body);
   }
   else
   {

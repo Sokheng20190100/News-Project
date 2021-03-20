@@ -7,7 +7,7 @@ class DetailPage extends StatefulWidget{
   _DetailPageState createState() => _DetailPageState();
 }
 class _DetailPageState extends State<DetailPage> {
-  Future<ArticleModel> _articleData;
+  Future<NewsModel> _articleData;
   List<Article> _article;
 
   @override
