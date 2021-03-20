@@ -8,7 +8,7 @@ Future<NewsModel> readData() async{
 
   String address = Android;
 
-  String url = "http://$address/api4flutter/read.php";
+  String url = "http://$address/newsproject/read.php";
 
   http.Response response = await http.get(url);
 
@@ -24,7 +24,7 @@ Future<String> insertData(Article article) async{
 
   String address = Android;
 
-  String url = "http://$address/api4flutter/insert.php";
+  String url = "http://$address/newsproject/insert.php";
   http.Response response = await http.post(url, body: article.toJson());
 
   if(response.statusCode == 200){
@@ -39,7 +39,7 @@ Future<String> updateData(Article article) async{
 
   String address = Android;
 
-  String url = "http://$address/api4flutter/update.php";
+  String url = "http://$address/newsproject/update.php";
   http.Response response = await http.post(url, body: article.toJson());
 
   if(response.statusCode == 200){
@@ -54,7 +54,7 @@ Future<String> deleteData(Article article) async{
 
   String address = Android;
 
-  String url = "http://$address/api4flutter/delete.php";
+  String url = "http://$address/newsproject/delete.php";
   http.Response response = await http.post(url, body: article.toJson());
 
   if(response.statusCode == 200){
